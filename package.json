@@ -1,0 +1,72 @@
+{
+  "name": "dsh-folder-drop-session",
+  "version": "1.0.0",
+  "description": "Drop a local folder into dsh to create a new conversation rooted in that folder.",
+  "type": "module",
+  "license": "MIT",
+  "author": "yang313760940",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yang313760940/dsh-folder-drop-session.git"
+  },
+  "homepage": "https://github.com/yang313760940/dsh-folder-drop-session#readme",
+  "bugs": {
+    "url": "https://github.com/yang313760940/dsh-folder-drop-session/issues"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "workspace",
+    "drag-and-drop"
+  ],
+  "icon": "./assets/icon.png",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./locale/*.json": "./locale/*.json",
+    "./assets/*": "./assets/*"
+  },
+  "engines": {
+    "node": ">=20",
+    "dsh": "0.2.2-rc.3"
+  },
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": {
+      "patch": "./cordis.patch.yml",
+      "platforms": ["win32", "darwin", "linux"]
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-api-workspace-controller",
+        "@deepseek-ai/dsh-api-session-controller",
+        "@deepseek-ai/dsh-client-ui-workspace",
+        "@deepseek-ai/dsh-client-ui-layout"
+      ]
+    }
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test test/core.test.mjs test/client.test.mjs test/bundle.test.mjs",
+    "test:runtime": "node scripts/runtime-smoke.mjs --modules \"$DSH_RUNTIME_MODULES\"",
+    "market": "node scripts/build.mjs && node scripts/build-market.mjs && node market/validate.mjs market-dist/index.json",
+    "check": "node scripts/build.mjs && node --test test/core.test.mjs test/client.test.mjs test/bundle.test.mjs",
+    "prepack": "node scripts/build.mjs"
+  },
+  "files": [
+    "lib/",
+    "src/",
+    "scripts/",
+    "locale/",
+    "assets/",
+    "docs/",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ]
+}

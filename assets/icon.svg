@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="dsh folder drop session">
+  <rect width="64" height="64" rx="14" fill="#1f232f"/>
+  <rect x="18" y="26" width="28" height="5" rx="2" fill="#7c8cff"/>
+  <rect x="18" y="31" width="28" height="15" rx="3" fill="#7c8cff"/>
+  <rect x="22" y="35" width="20" height="7" rx="1.5" fill="#1f232f"/>
+  <path d="M32 33v13M26.5 41.5 32 47l5.5-5.5" fill="none" stroke="#ecefff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

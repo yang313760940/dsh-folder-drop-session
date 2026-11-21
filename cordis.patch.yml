@@ -1,0 +1,12 @@
+# 真实 dsh bundle patch：添加一个独立 Loader 条目，不覆盖内置工作区插件。
+- insert:
+    - id: folder-drop-session
+      name: dsh-folder-drop-session
+      config:
+        enabled: true
+        # null：默认在整个 dsh 文档接收文件夹拖放（高亮仍落在工作区栏）；
+        # 填 CSS selector 则只在命中该区域时创建会话。
+        targetSelector: null
+        directoryCheckTimeoutMs: 8000
+        # 无上限队列会导致意外连续建会话，因此处理中再拖入给出提示。
+        maxItems: 128

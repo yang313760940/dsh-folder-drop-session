@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Folder Drop Conversations",
+    "description": "Drop a local folder into the workspace browser to create a new conversation rooted in that folder. Only the first folder in each drop is processed."
+  }
+}

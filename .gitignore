@@ -1,0 +1,7 @@
+node_modules/
+*.tgz
+coverage/
+permission-recovery/
+market-dist/
+.DS_Store
+*.bak

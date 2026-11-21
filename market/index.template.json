@@ -1,0 +1,12 @@
+{
+  "format": 1,
+  "title": {
+    "en": "dsh-folder-drop-session",
+    "zh": "文件夹拖入创建对话"
+  },
+  "description": {
+    "en": "Drop a folder from your file manager into dsh and a new conversation opens rooted in that folder.",
+    "zh": "把文件夹从文件管理器拖进 dsh，自动以该文件夹为工作区新建对话。"
+  },
+  "plugins": []
+}
